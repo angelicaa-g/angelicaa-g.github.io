@@ -1,6 +1,6 @@
 body{
-    background-color: #FADADD !important;
-    color: #EC407A;
+  background-color: #FADADD !important;
+  color: #EC407A;
 
   font-family: "Open Sans", sans-serif;
   font-optical-sizing: auto;
@@ -10,7 +10,11 @@ body{
   "wdth" 350;
 } 
 
-header, main, nav, footer{
+main{
+    text-align: left;
+}
+
+header, nav, footer{
     text-align: center;
 }
 
@@ -72,7 +76,6 @@ ul{
     text-align: left;
 
 }
-
 .hobby{
     color:#AD1457; 
     font-weight: bold;
