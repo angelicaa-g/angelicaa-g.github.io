@@ -41,6 +41,8 @@ p{
 }
 footer{
     font-family: Verdana;
+    color:  #8E2157; 
+    font-size: 0.9em;
 }
 table{
     margin: 0px auto;
@@ -73,7 +75,7 @@ ul{
 
 .hobby{
     color:#AD1457; 
-    font-weight: bold;;
+    font-weight: bold;
 
 }
 #contact{
