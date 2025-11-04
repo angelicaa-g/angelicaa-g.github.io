@@ -35,6 +35,15 @@ footer{
   color:  darkblue;
   font-size: 0.9em;
 }
+
+h1{
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+
+  text-transform: uppercase;
+  font-weight: 800;
+}
 .accent{
     color: #1565C0; 
     font-weight:bold;
@@ -68,4 +77,14 @@ figcaption{
   margin-top: -400px;
   width: 290px;
   color: purple;
+}
+
+h2 {
+  color: #4169E1; /* royal blue */
+  font-family: "Garamond", serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+p{
+ font-family: 'Lato', 'Lucida Sans', sans-serif;
 }
