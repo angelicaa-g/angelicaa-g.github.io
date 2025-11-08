@@ -1,0 +1,29 @@
+body {
+font-family: "Comic Relief", system-ui;
+font-size: 22.5px;
+background-image: url("../img/3d-rendering-questions-background_23-2151455632.avif");
+background-repeat: no-repeat;
+background-position: center;
+background-attachment: fixed;
+background-size: cover;
+image-rendering: crisp-edges;
+
+}
+header{
+    text-align: center;
+    padding-bottom: 40px;
+}
+div{
+    text-align: center;
+    padding-bottom: 25px;
+   font-family:  "Comic Relief", system-ui;
+   font-size: 22px;
+}
+h1 {
+  margin-top: 200px;  /* move the whole title down */
+  color: purple;
+}
+
+h2 {
+  margin-top: 10px;  /* small gap under the title */
+}

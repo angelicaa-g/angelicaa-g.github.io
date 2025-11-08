@@ -50,11 +50,11 @@ function checkGuess() {
 
   let remaining = 7 - attempts;
   document.querySelector("#attemptsLeft").textContent = remaining;
-  feedback.style.color = "orange";
+  feedback.style.color = "purple";
 
   if (guess == randomNumber) {
     feedback.textContent = "You guessed it!";
-    feedback.style.color = "darkgreen";
+    feedback.style.color = "Green";
     totalWins++;
     document.querySelector("#wins").textContent = totalWins;
     gameOver();
