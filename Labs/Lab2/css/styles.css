@@ -18,6 +18,7 @@ div{
     padding-bottom: 25px;
    font-family:  "Comic Relief", system-ui;
    font-size: 22px;
+   color: blueviolet;
 }
 h1 {
   margin-top: 200px;  /* move the whole title down */
@@ -26,4 +27,19 @@ h1 {
 
 h2 {
   margin-top: 10px;  /* small gap under the title */
+}
+button{
+    background-color: aqua;
+    border: none;
+    padding: 14px 25px; 
+    border-radius: 15px;   
+}
+button:hover{
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+ 
+}
+input{
+    border: none;
+    padding: 14px 25px; 
+    border-radius: 15px;  
 }
