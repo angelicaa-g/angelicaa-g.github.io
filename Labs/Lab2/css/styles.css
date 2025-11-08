@@ -7,7 +7,11 @@ background-position: center;
 background-attachment: fixed;
 background-size: cover;
 image-rendering: crisp-edges;
+}
 
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 header{
     text-align: center;
@@ -17,16 +21,17 @@ div{
     text-align: center;
     padding-bottom: 25px;
    font-family:  "Comic Relief", system-ui;
-   font-size: 22px;
+   font-size: 25px;
    color: blueviolet;
+   animation: fadeIn 1.5s ease-in;
 }
 h1 {
-  margin-top: 200px;  /* move the whole title down */
+  margin-top: 200px;  
   color: purple;
 }
 
 h2 {
-  margin-top: 10px;  /* small gap under the title */
+  margin-top: 10px;  
 }
 button{
     background-color: aqua;
