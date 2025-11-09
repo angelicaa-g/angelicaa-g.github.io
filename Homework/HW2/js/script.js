@@ -137,7 +137,41 @@ if (q6Response === 50) {
   wrongAnswer(6);
 }
 
+// Question 7
+let q7Response = document.querySelector("input[name=q7]:checked").value;
 
+if (q7Response == "True") {
+  rightAnswer(7);
+} else {
+  wrongAnswer(7);
+}
+
+// Question 8
+let q8Response = document.querySelector("#q8").value;
+
+if (q8Response === "Canada") {
+  rightAnswer(8);
+} else {
+  wrongAnswer(8);
+}
+
+// Question 9
+let q9Response = document.querySelector("#q9").value.toLowerCase().trim();
+
+if (q9Response === "new york" || q9Response === "new york city") {
+  rightAnswer(9);
+} else {
+  wrongAnswer(9);
+}
+
+// Question 10
+let q10Response = document.querySelector("input[name=q10]:checked").value;
+
+if (q10Response === "Northern") {
+  rightAnswer(10);
+} else {
+  wrongAnswer(10);
+}
 
   //Display total
   document.querySelector("#totalScore").innerHTML = `Total Score: ${score}`;
