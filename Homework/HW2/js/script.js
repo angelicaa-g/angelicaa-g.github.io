@@ -5,7 +5,16 @@ document.querySelector("button").addEventListener("click", gradeQuiz);
 var score = 0;
 var attempts = localStorage.getItem("total_attempts");
 
+let msg = ""
 
+if (score > 80){
+  msg = "Congratulations on scoring more than 80 points!"
+}
+else{
+  msg = "" //clears message 
+}
+
+document.querySelector("#congratsMsg").innerHTML = msg;
 
 
 displayQ4Choices();
@@ -21,22 +30,21 @@ function displayQ4Choices() {
        value="${q4ChoicesArray[i]}">
        <label for="${q4ChoicesArray[i]}"> ${q4ChoicesArray[i]}</label><br>`;
   }
-} //displayQ4Choices
+} 
 
 function displayQ5Choices() {
   let q5ChoicesArray = ["Alaska", "Texas", "California", "Montana"];
-  q5ChoicesArray = _.shuffle(q5ChoicesArray);  // random order
+  q5ChoicesArray = _.shuffle(q5ChoicesArray);
+  document.querySelector("#q5Choices").innerHTML = "";
 
   for (let i = 0; i < q5ChoicesArray.length; i++) {
     document.querySelector("#q5Choices").innerHTML += 
-      `<div>
-         <input type="checkbox" id="${q5ChoicesArray[i]}" value="${q5ChoicesArray[i]}">
-         <label for="${q5ChoicesArray[i]}">${q5ChoicesArray[i]}</label>
+      `<div class="form-check form-check-inline">
+         <input class="form-check-input" type="radio" name="q5" id="${q5ChoicesArray[i]}" value="${q5ChoicesArray[i]}">
+         <label class="form-check-label" for="${q5ChoicesArray[i]}">${q5ChoicesArray[i]}</label>
        </div>`;
   }
-} //displayQ5Choices
-
-
+}
 
 function rightAnswer(index){
   document.querySelector(`#q${index}Feedback`).innerHTML = "Correct!";
@@ -46,7 +54,7 @@ function rightAnswer(index){
 }
 
 function wrongAnswer(index){
-  document.querySelector(`#q${index}Feedback`).innerHTML = "Incorrect!";
+  document.querySelector(`#q${index}Feedback`).innerHTML = "Incorrect";
   document.querySelector(`#q${index}Feedback`).className = "bg-warning text-white";
   document.querySelector(`#markImg${index}`).innerHTML = "<img src='img/xmark.png' alt='xmark'>";
 }
