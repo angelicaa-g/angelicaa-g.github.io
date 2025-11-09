@@ -9,6 +9,7 @@ var attempts = localStorage.getItem("total_attempts");
 
 
 displayQ4Choices();
+displayQ5Choices();
 
 //Functions
 function displayQ4Choices() {
@@ -22,11 +23,26 @@ function displayQ4Choices() {
   }
 } //displayQ4Choices
 
+function displayQ5Choices() {
+  let q5ChoicesArray = ["Alaska", "Texas", "California", "Montana"];
+  q5ChoicesArray = _.shuffle(q5ChoicesArray);  // random order
+
+  for (let i = 0; i < q5ChoicesArray.length; i++) {
+    document.querySelector("#q5Choices").innerHTML += 
+      `<div>
+         <input type="checkbox" id="${q5ChoicesArray[i]}" value="${q5ChoicesArray[i]}">
+         <label for="${q5ChoicesArray[i]}">${q5ChoicesArray[i]}</label>
+       </div>`;
+  }
+} //displayQ5Choices
+
+
+
 function rightAnswer(index){
   document.querySelector(`#q${index}Feedback`).innerHTML = "Correct!";
   document.querySelector(`#q${index}Feedback`).className = "bg-success text-white";
   document.querySelector(`#markImg${index}`).innerHTML = "<img src='img/checkmark.png'>";
-  score += 20;
+  score += 10;
 }
 
 function wrongAnswer(index){
@@ -91,6 +107,18 @@ function gradeQuiz(){
   else {
   wrongAnswer(4);
   }
+
+  // Question 5
+if (
+  document.querySelector("#Alaska").checked &&
+  !document.querySelector("#Texas").checked &&
+  !document.querySelector("#California").checked &&
+  !document.querySelector("#Montana").checked
+) {
+  rightAnswer(5);
+} else {
+  wrongAnswer(5);
+}
 
 
 
