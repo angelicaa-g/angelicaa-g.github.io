@@ -128,6 +128,15 @@ if (
   wrongAnswer(5);
 }
 
+// Question 6
+let q6Response = parseInt(document.querySelector("#q6").value);
+
+if (q6Response === 50) {
+  rightAnswer(6);
+} else {
+  wrongAnswer(6);
+}
+
 
 
   //Display total
