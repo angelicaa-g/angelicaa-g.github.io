@@ -9,10 +9,11 @@
   <title>US Geography Quiz</title>
 </head>
 
-<body class="text-center bg-light p-5">
+<body class="text-center p-5">
   <div class="container">
     <h1 class="mb-4">US Geography Quiz</h1>
 
+    <figure><img src="img/200w.gif" alt="Cute penguin"></figure>
     <!-- First Question -->
     <h3><span id="markImg1"></span> What is the capital of California?</h3>
     <input type="text" id="q1" class="form-control w-25 mx-auto">
@@ -33,7 +34,7 @@
     <div id="q2Feedback"></div>
     <br>
 
-    <!-- Third Question -->
+   <!-- Third Question -->
     <h3><span id="markImg3"></span>What presidents are carved into Mount Rushmore?</h3>
     <div class="d-flex justify-content-center gap-3 flex-wrap">
       <div><input type="checkbox" id="Jackson"> <label for="Jackson">A. Jackson</label></div>
@@ -119,8 +120,18 @@
     <h3 id="totalAttempts" class="text-secondary"></h3>
     <h4 id="congratsMsg" class="text-success"></h4>
 
-    <button class="btn btn-outline-primary mt-3">Submit Quiz</button>
+    <button class="btn btn-info">Submit Quiz</button>
+
+
   </div>
+
+
+
+       <footer>
+            <hr>
+            CST 336 Internet Programming. 2025&copy; Ghazaryan <br>
+            <strong> Disclaimer: </strong> The information on this website is for educational purposes <br>
+        </footer>
 
   <script src="js/script.js"></script>
 </body>
