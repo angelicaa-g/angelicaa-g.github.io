@@ -55,7 +55,7 @@ function rightAnswer(index){
 
 function wrongAnswer(index){
   document.querySelector(`#q${index}Feedback`).innerHTML = "Incorrect";
-  document.querySelector(`#q${index}Feedback`).className = "bg-warning text-white";
+  document.querySelector(`#q${index}Feedback`).className = "bg-danger text-white";
   document.querySelector(`#markImg${index}`).innerHTML = "<img src='img/xmark.png' alt='xmark'>";
 }
 
