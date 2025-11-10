@@ -5,16 +5,6 @@ document.querySelector("button").addEventListener("click", gradeQuiz);
 var score = 0;
 var attempts = localStorage.getItem("total_attempts");
 
-let msg = ""
-
-if (score > 80){
-  msg = "Congratulations on scoring more than 80 points!"
-}
-else{
-  msg = "" //clears message 
-}
-
-document.querySelector("#congratsMsg").innerHTML = msg;
 
 
 displayQ4Choices();
@@ -177,5 +167,16 @@ if (q10Response === "Northern") {
   document.querySelector("#totalScore").innerHTML = `Total Score: ${score}`;
   document.querySelector("#totalAttempts").innerHTML = `Total Attempts: ${++attempts}`;
   localStorage.setItem("total_attempts", attempts); 
+
+let msg = ""
+
+if (score > 80){
+  msg = "Congratulations on scoring more than 80 points!"
+}
+else{
+  msg = "" //clears message 
+}
+
+document.querySelector("#congratsMsg").innerHTML = msg;  
 
 }
