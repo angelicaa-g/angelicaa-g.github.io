@@ -6,4 +6,6 @@ async function displayCity(){
     let response= await fetch(url);
     let data = await response.json();
     document.querySelector("#city").innerHTML = data.city;
+    document.querySelector("#latitude").innerHTML = data.latitude;
+    document.querySelector("#longitude").innerHTML = data.longitude;
 }
