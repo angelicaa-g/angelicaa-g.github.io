@@ -1,6 +1,9 @@
 document.querySelector("#zip").addEventListener("change", displayCity);
 document.querySelector("#state").addEventListener("change", displayCounties);
 document.querySelector("#username").addEventListener("change", checkUsername);
+document.querySelector("#signupForm").addEventListener("submit", function(event) {
+    validateForm(event);
+});
 
 
 
@@ -41,5 +44,19 @@ async function checkUsername(){
     } else {
         usernameError.innerHTML = "Username taken";
         usernameError.style.color = "red";
+    }
+}
+function validateForm(e) {
+    let isValid = true;
+
+    let username = document.querySelector("#username").value;
+    if (username.length == 0) {
+        document.querySelector("#usernameError").innerHTML = "Username Required!";
+        isValid = false;
+    }
+
+    
+    if (!isValid) {
+        e.preventDefault();
     }
 }

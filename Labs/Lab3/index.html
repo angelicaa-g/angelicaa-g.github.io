@@ -9,7 +9,7 @@
 <body>
     <h1> Sign Up </h1>
 
-    <form action="welcome.html">
+    <form  id="signupForm" action="welcome.html">
      First Name:<input type="text" name="fName"><br>
      Last Name: <input type="text" name="lName"><br>
      Gender:    <br>
@@ -36,12 +36,11 @@
        <input type="text" id="username" ><br><br>
        <span id="usernameError"></span><br><br> 
 
+      Password: <input type="password" id="pwd1">
+      <span id="suggestedPwd"></span> <br>
+      Type Password Again: <input type="password" id="pwd2"><br>
+      <span id="passwordError"></span>
 
-        Password: <input type="password">
-<span id=”suggestedPwd”></span> <br>
-        Type Password Again: <input type="password"><br>
-   
-<span id=”passwordError”></span> 
 
          <input type="submit" value="Sign up!">
          <script src="js/script.js"></script>
