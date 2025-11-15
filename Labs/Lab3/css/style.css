@@ -3,6 +3,7 @@ h1{
     font-size: 45px;
     font-family: 'Lucida Sans';
     animation: fadeIn 0.5s ease-in;
+    text-shadow: 0 0 4.5px rgb(255, 140, 255);
 }
 #welcome{
   text-align: center;
