@@ -23,6 +23,7 @@ body{
 footer{
     color: darkblue;
     margin-top: 390px; /*makes it go to the buttom */
+    font-size: 15px;
 }
 form{
      border: 5px solid orange;
