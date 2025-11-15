@@ -12,6 +12,14 @@ async function displayCity(){
     let url = `https://csumb.space/api/cityInfoAPI.php?zip=${zipCode}`;
     let response= await fetch(url);
     let data = await response.json();
+
+  if (!data.city) {
+        document.querySelector("#city").innerHTML = "Zip code not found";
+        document.querySelector("#latitude").innerHTML = "Latitude not found";
+        document.querySelector("#longitude").innerHTML = "Longitude not found";
+        return; 
+    }
+
     document.querySelector("#city").innerHTML = data.city;
     document.querySelector("#latitude").innerHTML = data.latitude;
     document.querySelector("#longitude").innerHTML = data.longitude;
