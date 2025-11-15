@@ -4,8 +4,7 @@ document.querySelector("#username").addEventListener("change", checkUsername);
 document.querySelector("#signupForm").addEventListener("submit", function(event) {
     validateForm(event);
 });
-
-
+document.querySelector("#pwd1").addEventListener("click", suggestPassword);
 
 async function displayCity(){
     let zipCode = document.querySelector("#zip").value;
@@ -60,11 +59,36 @@ function validateForm(e) {
     let username = document.querySelector("#username").value;
     if (username.length == 0) {
         document.querySelector("#usernameError").innerHTML = "Username Required!";
+        usernameError.style.color = "red";
         isValid = false;
     }
+
+    let password = document.querySelector("#pwd1").value;
+    if (password.length < 6) {
+        document.querySelector("#passwordError").innerHTML = "Password Required! <br> Password must be at least 6 characters";
+        passwordError.style.color = "red";
+        isValid = false;
+    }
+    let password2 = document.querySelector("#pwd2").value;
+    if (password !== password2) {
+        document.querySelector("#passwordError").innerHTML = "Passwords do not match.";
+        isValid = false;
+    }
+
 
     
     if (!isValid) {
         e.preventDefault();
     }
 }
+function suggestPassword() {
+    let password = "";
+    let letters = "abcdefg123456789";
+
+    for (let i = 0; i < 6; i++) {
+        password += letters[Math.floor(Math.random() * letters.length)];
+    }
+
+    document.querySelector("#suggestedPwd").innerHTML = "Suggested: " + password;
+}
+
