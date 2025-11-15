@@ -43,3 +43,6 @@ input[type="submit"]{
     font-family: 'Lucida Sans Unicode';
     border: 2px solid darkorchid;
 }
+option{
+    color: purple;
+}
