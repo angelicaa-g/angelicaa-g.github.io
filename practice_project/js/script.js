@@ -9,9 +9,7 @@ async function getQuote(){
     console.log("JS is running!");
 
     document.querySelector("#random_quote").innerHTML =  `${data.quoteText}`;
-    document.querySelector("#author_firstName").innerHTML = `${data.firstName}`; //displays the corresponding author's first name 
-    document.querySelector("#author_lastName").innerHTML = `${data.lastName}`; //displays the corresponding author's last name 
-   
+    document.querySelector("#author_fullName").innerHTML =`${data.firstName} ${data.lastName}`; //displays the corresponding author's first and last name
 }
 
 
