@@ -1,0 +1,50 @@
+h1{
+    color: rgb(165, 33, 165);
+    font-size: 45px;
+    font-family: 'Lucida Sans';
+    animation: fadeIn 0.5s ease-in;
+    text-shadow: 0 0 4.5px rgb(255, 140, 255);
+}
+#welcome{
+  text-align: center;
+  color: rgb(111, 111, 204);
+  font-family: Verdana;
+  margin-top: 100px;
+
+
+}
+body{
+    text-align: center;
+    background-color: rgb(224, 241, 255);
+    color:rgb(9, 2, 100);
+    font-size: 20px;
+    font-family:  'Lucida Sans Regular';
+
+}
+footer{
+    color: darkblue;
+    margin-top: 390px; /*makes it go to the buttom */
+    font-size: 15px;
+}
+form{
+     border: 5px solid orange;
+      padding: 60px;
+      width: 650px;
+      margin: 0 auto; /*centers it */
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+input[type="submit"]{
+    border-radius: 55px;  /*soften it*/
+    width: 150px;
+    font-size: 25px;
+    margin-top: 55px;
+    background-color: aqua;
+    font-family: 'Lucida Sans Unicode';
+    border: 2px solid darkorchid;
+}
+option{
+    color: purple;
+}

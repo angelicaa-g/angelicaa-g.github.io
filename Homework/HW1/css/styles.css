@@ -1,0 +1,111 @@
+body{
+  background-color:#b0b3b8!important;
+  color: white;  
+
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+  "wdth" 350;
+} 
+header, nav, footer{
+    text-align: center;
+}
+
+
+nav a{
+    padding: 15px;
+    padding-bottom:4px;
+    font-size: 1.8em;
+    text-decoration: none;
+    color: #6E7C92;
+}
+nav a:hover {
+   font-size: 2em;
+   transition: .4s;
+}
+
+footer{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  font-family: Verdana;
+  color:  darkblue;
+  font-size: 0.9em;
+}
+
+h1{
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+
+  text-transform: uppercase;
+  font-weight: 800;
+  opacity: 0;
+  animation: fade 1.5s forwards;
+}
+
+@keyframes fade {
+  to { opacity: 1.5; }
+}
+.accent{
+    color: #1565C0; 
+    font-weight:bold;
+}
+
+h2{
+    color:darkblue;
+}
+p{
+    color: black;
+}
+a{
+      text-decoration: none;
+      color: purple;
+}
+ul{
+    color: purple;
+}
+details{
+    color: blueviolet;
+}
+figure img {
+  float: right;
+  margin-right: 60px;
+  margin-top: -380px;
+  width: 290px;
+}
+figcaption{
+  float: right;
+  margin-right: 60px;
+  margin-top: -400px;
+  width: 290px;
+  color: purple;
+}
+
+h2 {
+  color: #4169E1; /* royal blue */
+  font-family: "Garamond", serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+p{
+ font-family: 'Lato', 'Lucida Sans', sans-serif;
+}
+.ai-brain{
+  width: 450px;
+  float: right;
+  
+}
+.ai-life{
+  width: 550px;
+  float: right;
+
+}
+.ai-future{
+   width: 450px;
+  float: right;
+}
+

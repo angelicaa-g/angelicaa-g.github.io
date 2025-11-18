@@ -1,0 +1,54 @@
+h1{
+    color: aqua;
+    font-size: 60px;
+    text-align: center;
+    font-family: 'Lucida Sans';
+    animation: fadeIn 0.5s ease-in;
+    text-shadow: 0 0 4.5px rgb(163, 70, 175);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+body{
+    background-image: url("../img/tv_show_rick_and_morty_rick_sanchez_near_plants_with_sunrise_background_hd_movies.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;    
+}
+footer{
+    color: rgb(0, 0, 0);
+    margin-top: 420px; /*makes it go to buttom */
+    font-size:  18px;
+    text-align: center;
+    
+}
+label{
+   color: rgb(7, 78, 78);
+    font-size: 28px;
+    font-weight: bold;
+   
+}
+
+button{
+    border-radius: 55px;  /*soften it*/
+    width: 150px;
+    font-size: 25px;
+    margin-top: 55px;
+    background-color: aqua;
+    font-family: 'Lucida Sans Unicode';
+    border: 2px solid darkorchid;
+    
+}
+form{
+   font-size: 35px;
+   margin-left: 280px;  
+   font-size: 19px;
+   font-family:  'Lucida Sans Regular';
+}
+input {
+    padding: 5px;
+    border-radius: 6px;
+    border: 2px solid teal;
+    font-size: 20px;
+}
