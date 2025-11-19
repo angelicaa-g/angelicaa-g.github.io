@@ -95,3 +95,16 @@ body {
 #translated{
   font-family: cursive;
 }
+h1{
+    color: aqua;
+    font-size: 60px;
+    text-align: center;
+    font-family: 'Lucida Sans';
+    animation: fadeIn 0.5s ease-in;
+    text-shadow: 0 0 4.5px rgb(163, 70, 175);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
