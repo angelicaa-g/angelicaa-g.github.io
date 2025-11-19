@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Famous Quotes</title>
     <link href= "css/styles.css" rel = "stylesheet">
+      <script src="https://cdn.jsdelivr.net/npm/underscore@1.13.2/underscore-umd-min.js"></script> <!--need this that the shuffle works-->
 </head>
 <body>
 
@@ -14,7 +15,32 @@
         <div class="row">
         <div class="column" id = "bioCol"></div>
         <div class="column" id = "imgCol"></div>
+
         </div>
+        <div id="languagesContainer">
+       <label>
+        <input type="radio" name="language" value="EN">
+        English
+       </label>
+
+      <label>
+        <input type="radio" name="language" value="ES">
+        Esperanto
+      </label>
+
+     <label>
+        <input type="radio" name="language" value="SP">
+        Spanish
+     </label>
+
+     <label>
+        <input type="radio" name="language" value="FR">
+        French
+    </label>
+   </div>
+
+   <button id="Flags">Translate</button>
         <script src="js/script.js"></script>
+       
 </body>
 </html>
