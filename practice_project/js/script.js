@@ -1,10 +1,10 @@
 document.querySelector("#Author_Info").addEventListener("click",displayInfo); //when the user clicks the button, bio and img will appear
 document.querySelector("#Flags").addEventListener("click", displayFlag);
-document.querySelector("#getQoutes").addEventListener("click", getQuotes);
+document.querySelector("#getQuotes").addEventListener("click", ShowQuotes);
 getQuote();
-displayInfo();
+//displayInfo();
 randomLang();
-getQuotes();
+
 let quoteData = undefined;
 
 async function getQuote(){
@@ -19,6 +19,7 @@ async function getQuote(){
 
     document.querySelector("#random_quote").innerHTML =  `${data.quoteText}`;
     document.querySelector("#author_fullName").innerHTML =`${data.firstName} ${data.lastName}`; //displays the corresponding author's first and last name
+     
 }
 async function displayInfo(){
    // let url = "https://csumb.space/api/famousQuotes/getRandomQuote.php";
@@ -27,7 +28,7 @@ async function displayInfo(){
 
   
    document.querySelector("#bioCol").innerHTML = `${quoteData.bio}`;
-   document.querySelector("#imgCol").innerHTML = `<img src=${quoteData.picture} width="200">`; //displays the image with custom sizing
+   document.querySelector("#imgCol").innerHTML = `<img src="${quoteData.picture}" width="200">`; //displays the image with custom sizing
 }
 
 
@@ -80,26 +81,38 @@ async function displayFlag(){
     document.querySelector("#translated").innerHTML = `${data.translation}`; //retrieve the translated qoute
 
 }
-async function getQuotes(){
+async function ShowQuotes(){
   let number = document.querySelector("#Num").value;
   let value_result = document.querySelector("#value_result");
-  if(number < 1 || number > 5){ //input must be betwene 1 and 5
-     value_result.innerHTML = "Please enter a number between 1 and 5!";
-     value_result.style.color = "red";
-     return;
-  }
-  if(number === ""){ //if input is left empty 
+  let qList = document.querySelector("#quotesList");  //retrieve the qoutes 
+
+    if(number === ""){ //if input is left empty 
     value_result.innerHTML = "Please enter a number, do not leave this area blank!";
     value_result.style.color = "red";
     return;
   }
 
-  let url = `https://csumb.space/api/famousQuotes/getQuotes.php?n=${number}`;
-   let response = await fetch(url);
+  if(number < 1 || number > 5){ //input must be betwene 1 and 5
+     value_result.innerHTML = "Please enter a number between 1 and 5!";
+     value_result.style.color = "red";
+     return;
+  }
 
-    let data = await response.json();
-    let qList = document.querySelector("#quotesList"); //retrieve the qoutes 
+  value_result.innerHTML = "";
+  qList.innerHTML = "";
+
+
+  let url = `https://csumb.space/api/famousQuotes/getQuotes.php?n=${number}`;
+  let response = await fetch(url);
+  let data = await response.json();
+
 
     //do for loop
-
+     for (let i = 0; i < data.length; i++) {
+     document.querySelector('#quotesList').innerHTML += `<div>
+      ${data[i].quoteText} —
+      ${data[i].firstName} ${data[i].lastName}
+    </div>`;
+  }
 }
+
