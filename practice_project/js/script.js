@@ -1,8 +1,10 @@
 document.querySelector("#Author_Info").addEventListener("click",displayInfo); //when the user clicks the button, bio and img will appear
 document.querySelector("#Flags").addEventListener("click", displayFlag);
+document.querySelector("#getQoutes").addEventListener("click", getQuotes);
 getQuote();
 displayInfo();
 randomLang();
+getQuotes();
 let quoteData = undefined;
 
 async function getQuote(){
@@ -76,5 +78,28 @@ async function displayFlag(){
     let data = await response.json();
 
     document.querySelector("#translated").innerHTML = `${data.translation}`; //retrieve the translated qoute
+
+}
+async function getQuotes(){
+  let number = document.querySelector("#Num").value;
+  let value_result = document.querySelector("#value_result");
+  if(number < 1 || number > 5){ //input must be betwene 1 and 5
+     value_result.innerHTML = "Please enter a number between 1 and 5!";
+     value_result.style.color = "red";
+     return;
+  }
+  if(number === ""){ //if input is left empty 
+    value_result.innerHTML = "Please enter a number, do not leave this area blank!";
+    value_result.style.color = "red";
+    return;
+  }
+
+  let url = `https://csumb.space/api/famousQuotes/getQuotes.php?n=${number}`;
+   let response = await fetch(url);
+
+    let data = await response.json();
+    let qList = document.querySelector("#quotesList"); //retrieve the qoutes 
+
+    //do for loop
 
 }
