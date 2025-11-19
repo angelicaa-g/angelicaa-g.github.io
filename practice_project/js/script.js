@@ -3,6 +3,11 @@ document.querySelector("#Flags").addEventListener("click", displayFlag);
 document.querySelector("#getQuotes").addEventListener("click", ShowQuotes);
 getQuote();
 //displayInfo();
+//When the user clicks”	click
+//“When the user submits the form”	submit
+//“When the user selects a language”	change
+//“When the user types”	input
+//“When mouse hovers over element”	mouseover
 randomLang();
 displayRandomBackground();
 
