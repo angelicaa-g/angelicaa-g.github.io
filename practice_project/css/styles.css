@@ -1,7 +1,97 @@
 .row {
   display: flex;
+  justify-content: center; 
 }
 
 .column {
   flex: 50%;
+}
+
+label{
+  color: purple;
+  font-size: 35px;
+  font-family: 'Lucida Sans';
+  text-align: center;
+
+}
+#random_quote{
+   color: aqua;
+   size: 35px;
+     font-family:  cursive;
+}
+#author_fullName{
+  color: aqua;
+  size: 35px;
+  font-family:  cursive;;
+}
+#Author_Info{
+   border-radius: 20px;  /*soften it*/
+   width: 150px;
+   font-size: 15px;
+   margin-top: 20px;
+   background-color: aqua;
+   font-family: 'Lucida Sans Unicode';
+   border: 2px solid darkorchid;
+}
+#bioCol{
+  color: aqua;
+   background-color: rgba(208, 38, 250, 0.2); /* background */
+  padding: 15px;                /* space around text */
+  border-radius: 10px;          /* rounded corners */
+  color: aqua;                  /* your text color */
+  width: fit-content;           /* shrink to fit text */
+  display: inline-block; /*prevents full-width stretching */
+
+  font-family: 'Lucida Sans';
+  
+}
+#getQuotes{
+    border-radius: 20px;  /*soften it*/
+   width: 150px;
+   font-size: 15px;
+   margin-top: 20px;
+   background-color: aqua;
+   font-family: 'Lucida Sans Unicode';
+   border: 2px solid darkorchid;
+}
+footer{
+  color: rgb(0, 0, 0);
+    margin-top: 600px; /*makes it go to buttom */
+    font-size:  18px;
+    text-align: center;
+}
+#Flags{
+   border-radius: 20px;  /*soften it*/
+   width: 150px;
+   font-size: 15px;
+   margin-top: 20px;
+   background-color: aqua;
+   font-family: 'Lucida Sans Unicode';
+   border: 2px solid darkorchid;
+}
+
+#Flags img {
+    display: block;        /* forces the image onto its own line */
+    margin: 65px auto;     /* centers the image horizontally */
+}
+input{
+   padding: 5px;
+    border-radius: 6px;
+    border: 2px solid teal;
+    font-size: 20px;
+    text-align: right;
+}
+#languagesContainer {
+  text-align: center; 
+}
+body {
+  text-align: center;
+}
+#quotesList{
+  font-family: cursive;
+  background-color: rgba(208, 38, 250, 0.2); 
+
+}
+#translated{
+  font-family: cursive;
 }

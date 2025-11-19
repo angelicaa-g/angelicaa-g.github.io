@@ -4,6 +4,7 @@ document.querySelector("#getQuotes").addEventListener("click", ShowQuotes);
 getQuote();
 //displayInfo();
 randomLang();
+displayRandomBackground();
 
 let quoteData = undefined;
 
@@ -107,7 +108,7 @@ async function ShowQuotes(){
   let data = await response.json();
 
 
-    //do for loop
+    //do for loop display the qoute (s) and first name last name
      for (let i = 0; i < data.length; i++) {
      document.querySelector('#quotesList').innerHTML += `<div>
       ${data[i].quoteText} —
@@ -116,3 +117,16 @@ async function ShowQuotes(){
   }
 }
 
+async function displayRandomBackground(){
+  let url = "https://pixabay.com/api/?key=5589438-47a0bca778bf23fc2e8c5bf3e&per_page=50&orientation=horizontal&q=flowers";
+  let response = await fetch(url);
+  let data = await response.json();
+  
+  let shuffled = _.shuffle(data.hits); 
+  let randomImg = shuffled[0].largeImageURL; //first item is random 
+
+  //styling
+  document.body.style.backgroundImage = `url('${randomImg}')`;   //setting the background img 
+  document.body.style.backgroundSize = "cover";  
+  document.body.style.backgroundRepeat = "no-repeat";
+}
