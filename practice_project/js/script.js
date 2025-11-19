@@ -46,26 +46,35 @@ function randomLang(){
 async function displayFlag(){
     let corresponding_img = " ";
     let lang =  document.querySelector("input[name='language']:checked").value; //find the language that the user selected
+
+    let abbr = ""; //two-letter abbreviation for the language
     if(lang === "English"){
         corresponding_img = "img/english_flag.png"; 
+         abbr = "EN";
        
     }
 
     if (lang === "Esperanto") {
         corresponding_img = "img/esperanto_flag.png"; 
+         abbr = "ES";
     }
 
     if (lang === "Spanish") {
         corresponding_img = "img/spanish_flag.png"; 
+         abbr = "SP";
     }
 
     if (lang === "French") {
         corresponding_img = "img/french_flag.png"; 
+         abbr = "FR";
     }
 
     document.querySelector("#Flags").innerHTML = `<img src="${corresponding_img}" width="200">`
-    let url = "https://csumb.space/api/famousQuotes/translateQuote.php?lang=ES&quoteId=2";
+    let url = `https://csumb.space/api/famousQuotes/translateQuote.php?lang=${abbr}&quoteId=${quoteData.quoteId}`;
     let response = await fetch(url);
 
     let data = await response.json();
+
+    document.querySelector("#translated").innerHTML = `${data.translation}`; //retrieve the translated qoute
+
 }
