@@ -78,7 +78,7 @@ async function displayFlag(){
          abbr = "FR";
     }
 
-    document.querySelector("#Flags").innerHTML = `<img src="${corresponding_img}" width="200">`
+   document.querySelector("#flagContainer").innerHTML =`<img src="${corresponding_img}" width="200">`;
     let url = `https://csumb.space/api/famousQuotes/translateQuote.php?lang=${abbr}&quoteId=${quoteData.quoteId}`;
     let response = await fetch(url);
 
