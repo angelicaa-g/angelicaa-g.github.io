@@ -8,6 +8,29 @@ getQuote();
 //“When the user selects a language”	change
 //“When the user types”	input
 //“When mouse hovers over element”	mouseover
+// when user clicks a button → use "click"
+
+// when user selects a radio button → use "change"
+
+// when user picks something from a dropdown <select> → use "change"
+
+// when user types in an input box → use "input"
+
+// when user submits a form → use "submit"  
+
+// when mouse hovers over something → use "mouseover"
+
+// when the page loads and you want something to run automatically → just call the function (no event listener)
+
+// when user scrolls → use "scroll"
+
+// when user presses a key on the keyboard → use "keydown"
+
+// when user releases a key → use "keyup"
+
+// when user double-clicks → use "dblclick"
+
+// when an image finishes loading → use "load"
 randomLang();
 displayRandomBackground();
 
