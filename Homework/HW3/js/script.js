@@ -1,7 +1,7 @@
 document.querySelector("#submitBtn").addEventListener("click", getCharacter);
 
 async function getCharacter() {
-    let char_name = document.querySelector("#char_name").value;
+    let char_name = document.querySelector("#char_name").value;  //collects user input
     let char_result = document.querySelector("#char_result");
     let spec_result = document.querySelector("#spec_result");
     let location = document.querySelector("#location");
@@ -17,7 +17,7 @@ async function getCharacter() {
     }
 
     // Fetch API data
-    let url = `https://rickandmortyapi.com/api/character/?name=${char_name}`;
+    let url = `https://rickandmortyapi.com/api/character/?name=${char_name}`; 
     let response = await fetch(url);
     let data = await response.json();
 
