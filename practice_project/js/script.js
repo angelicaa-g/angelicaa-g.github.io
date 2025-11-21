@@ -193,7 +193,7 @@ async function displayRandomBackground(){
 //  MISTAKES TO AVOID 
 //  Using .value on a NodeList → NodeLists do NOT have .value
 //  Looping radio buttons (only one is selected, so no loop)
-// Forgetting i++ → infinite loop
+// Forgetting i++ → infinite loop 
 //  Using <= array.length → will go OUT OF RANGE, always use <
 
 //  MEMORY TRICK 
