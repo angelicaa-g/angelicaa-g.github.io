@@ -130,8 +130,12 @@ async function displayRandomBackground(){
   document.body.style.backgroundSize = "cover";  
   document.body.style.backgroundRepeat = "no-repeat";
 }
-//notess
+//notes
 // EVENT LISTENERS
+// click → buttons
+// change → radio + checkbox + <select>
+// input → typing in box
+// submit → forms
 
 // When user clicks a button → use "click"
 // example: document.querySelector("#btn").addEventListener("click", fn);
@@ -195,3 +199,26 @@ async function displayRandomBackground(){
 //  MEMORY TRICK 
 // Use loops ONLY when you have MANY items to process (API list, checkboxes).
 // If you only have ONE selected item (radio button), DO NOT use a loop.
+
+//HOW TO BUILD HTML IN A LOOP
+// 1. Copy ONE example of the HTML element
+// 2. Replace changing parts with ${array[i]} or ${data[i].property}
+// 3. Wrap it in backticks `...`
+// 4. Put it inside a for loop
+// 5. Add to container with innerHTML +=
+// 6. Clear container first: container.innerHTML = "";
+// change ONLY:
+// - value="${arr[i]}"
+// - text ${arr[i]} or ${data[i].property}
+
+// DO NOT change:
+// - <label>, <div>, <input>, etc (structure)
+// - name="group"
+// - container id
+
+// if (!value) → empty textbox
+// if (value < 1 || value > 5) → number range
+// if (choices.length === 0) → checkbox none selected
+// if (!selectedRadio) → radio not selected
+// if (!data.property) → API returned nothing
+
