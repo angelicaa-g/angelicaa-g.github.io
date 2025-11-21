@@ -268,7 +268,7 @@ async function displayRandomBackground(){
 // ------------------------------------------------------------
 
 // get selected radio button
-// let selected = document.querySelector("input[name='color']:checked");
+// let selected = document.querySelector("input[name='color']:checked").value;;
 
 // validate nothing selected
 // if (!selected) { /* show error */ }
@@ -305,6 +305,41 @@ async function displayRandomBackground(){
 
 // validate (only if there is a blank option)
 // if (!choice) { /* show error */ }
+
+// ------------------------------------------------------------
+// WHEN TO USE A FOR LOOP
+// ------------------------------------------------------------
+
+// 1) When displaying MULTIPLE items from an ARRAY
+//    (example: shuffled languages, shuffled animals)
+//    → loop through array and append HTML
+
+// 2) When an API returns MULTIPLE objects (data.length > 1)
+//    (example: getQuotes.php?n=5)
+//    → loop through data[i] to display each item
+
+// 3) When collecting MULTIPLE checkbox values
+//    (querySelectorAll → NodeList)
+//    → loop to push each .value into an array
+
+
+
+// ------------------------------------------------------------
+// WHEN YOU DO NOT USE A LOOP
+// ------------------------------------------------------------
+
+// 1) Radio buttons (only ONE selected)
+//    document.querySelector("input[name='x']:checked").value
+
+// 2) Textbox input (only ONE value)
+//    document.querySelector("#input").value
+
+// 3) Dropdown/select (only ONE selected option)
+//    document.querySelector("#select").value
+
+// 4) API returns a SINGLE object
+//    (example: getRandomQuote.php → one quote)
+//    Just display it → no loop
 
 
 
