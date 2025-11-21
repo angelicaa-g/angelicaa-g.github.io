@@ -2,35 +2,7 @@ document.querySelector("#Author_Info").addEventListener("click",displayInfo); //
 document.querySelector("#Flags").addEventListener("click", displayFlag);
 document.querySelector("#getQuotes").addEventListener("click", ShowQuotes);
 getQuote();
-//displayInfo();
-//When the user clicks”	click
-//“When the user submits the form”	submit
-//“When the user selects a language”	change
-//“When the user types”	input
-//“When mouse hovers over element”	mouseover
-// when user clicks a button → use "click"
 
-// when user selects a radio button → use "change"
-
-// when user picks something from a dropdown <select> → use "change"
-
-// when user types in an input box → use "input"
-
-// when user submits a form → use "submit"  
-
-// when mouse hovers over something → use "mouseover"
-
-// when the page loads and you want something to run automatically → just call the function (no event listener)
-
-// when user scrolls → use "scroll"
-
-// when user presses a key on the keyboard → use "keydown"
-
-// when user releases a key → use "keyup"
-
-// when user double-clicks → use "dblclick"
-
-// when an image finishes loading → use "load"
 randomLang();
 displayRandomBackground();
 
@@ -158,3 +130,68 @@ async function displayRandomBackground(){
   document.body.style.backgroundSize = "cover";  
   document.body.style.backgroundRepeat = "no-repeat";
 }
+//notess
+// EVENT LISTENERS
+
+// When user clicks a button → use "click"
+// example: document.querySelector("#btn").addEventListener("click", fn);
+
+// When user selects a radio button → use "change"
+// example: document.querySelector("#languages").addEventListener("change", fn);
+
+// When user checks/unchecks a checkbox → use "change"
+
+// When user picks an option from a dropdown <select> → use "change"
+
+// When user types in an input box → use "input"
+// (but if you only need the final value, you can use "change")
+
+// When user submits a form → use "submit"
+
+// When the page loads and you want code to run immediately → just call the function
+// example: getQuote();   // no event listener
+
+// DO NOT use "click" for radio, checkbox, or dropdown.
+// "change" is correct because the value is changing, not the click.
+
+// LOOPS 
+
+// Basic for-loop structure (MOST COMMON in your assignments)
+// for (let i = 0; i < array.length; i++) {
+//     // use array[i]
+// }
+
+// Used when displaying multiple quotes from an API
+// Example:
+// for (let i = 0; i < data.length; i++) {
+//     quotesList.innerHTML += data[i].quoteText;
+// }
+
+// Looping through CHECKBOXES (NodeList)
+// let choices = document.querySelectorAll("input[name='food']:checked");
+// for (let i = 0; i < choices.length; i++) {
+//     selected.push(choices[i].value);
+// }
+
+//  Looping through API results stored in data[]
+// Always use: data[i].propertyName
+// Example:
+// data[i].firstName
+// data[i].lastName
+// data[i].quoteText
+
+// Looping through shuffled arrays
+// array = _.shuffle(array);
+// for (let i = 0; i < array.length; i++) {
+//     // display shuffled items
+// }
+
+//  MISTAKES TO AVOID 
+//  Using .value on a NodeList → NodeLists do NOT have .value
+//  Looping radio buttons (only one is selected, so no loop)
+// Forgetting i++ → infinite loop
+//  Using <= array.length → will go OUT OF RANGE, always use <
+
+//  MEMORY TRICK 
+// Use loops ONLY when you have MANY items to process (API list, checkboxes).
+// If you only have ONE selected item (radio button), DO NOT use a loop.
