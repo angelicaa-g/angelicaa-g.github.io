@@ -219,6 +219,13 @@ async function displayRandomBackground(){
 //</label>`;
 //}
 
+//HTML ATTRIBUTES ALWAYS USE QUOTES
+// in ANY HTML you generate (inside backticks):
+// value="..."
+// id="..."
+// class="..."
+// name="..."
+
 // DO NOT change:
 // - <label>, <div>, <input>, etc (structure)
 // - name="group"
