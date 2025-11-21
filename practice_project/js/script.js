@@ -93,7 +93,7 @@ async function ShowQuotes(){
     return;
   }
 
-  if(number < 1 || number > 5){ //input must be betwene 1 and 5
+  if(number < 1 || number > 5){ //input must be betwene 1 and 5! 
      value_result.innerHTML = "Please enter a number between 1 and 5!";
      value_result.style.color = "red";
      return;
@@ -116,6 +116,7 @@ async function ShowQuotes(){
     </div>`;
   }
 }
+
 
 async function displayRandomBackground(){
   let url = "https://pixabay.com/api/?key=5589438-47a0bca778bf23fc2e8c5bf3e&per_page=50&orientation=horizontal&q=flowers";
@@ -210,6 +211,13 @@ async function displayRandomBackground(){
 // change ONLY:
 // - value="${arr[i]}"
 // - text ${arr[i]} or ${data[i].property}
+//let animals = ["Cat", "Dog", "Fox", "Panda"];
+//for(i = 0; i< animals.length; i++){
+// document.querySelector("#animalsContainer").innerHTML +=  `<label>
+ // <input type="radio" name="animal" value="${animals[i]}">
+ //${animals[i]}
+//</label>`;
+//}
 
 // DO NOT change:
 // - <label>, <div>, <input>, etc (structure)
@@ -221,4 +229,6 @@ async function displayRandomBackground(){
 // if (choices.length === 0) → checkbox none selected
 // if (!selectedRadio) → radio not selected
 // if (!data.property) → API returned nothing
+
+
 
