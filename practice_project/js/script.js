@@ -83,7 +83,7 @@ async function displayFlag(){
 
 }
 async function ShowQuotes(){
-  let number = document.querySelector("#Num").value;
+  let number = document.querySelector("#Num").value; //collect user input
   let value_result = document.querySelector("#value_result");
   let qList = document.querySelector("#quotesList");  //retrieve the qoutes 
 
@@ -236,6 +236,75 @@ async function displayRandomBackground(){
 // if (choices.length === 0) → checkbox none selected
 // if (!selectedRadio) → radio not selected
 // if (!data.property) → API returned nothing
+
+// TEXTBOX INPUT  (HTML: <input type="text" id="userText">)
+// ------------------------------------------------------------
+
+// get textbox value
+// let value = document.querySelector("#userText").value;
+
+// check if empty
+// if (!value) { /* show error */ }
+
+// number range check example
+// if (value < 1 || value > 5) { /* show error */ }
+
+
+
+// ------------------------------------------------------------
+// NUMBER INPUT  (HTML: <input type="number" id="numBox">)
+// ------------------------------------------------------------
+
+// get number value
+// let num = document.querySelector("#numBox").value;
+
+// validate number range
+// if (num < 1 || num > 5) { /* show error */ }
+
+
+
+// ------------------------------------------------------------
+// RADIO BUTTONS  (HTML: <input type="radio" name="color" value="Red">)
+// ------------------------------------------------------------
+
+// get selected radio button
+// let selected = document.querySelector("input[name='color']:checked");
+
+// validate nothing selected
+// if (!selected) { /* show error */ }
+
+// get selected value
+// selected.value;
+
+
+
+// ------------------------------------------------------------
+// CHECKBOXES  (HTML: <input type="checkbox" name="food" value="Pizza">)
+// ------------------------------------------------------------
+
+// get all checked boxes
+// let items = document.querySelectorAll("input[name='food']:checked");
+
+// build array of selected values
+// let arr = [];
+// for (let i = 0; i < items.length; i++) {
+//     arr.push(items[i].value);
+// }
+
+// validate if none selected
+// if (arr.length === 0) { /* show error */ }
+
+
+
+// ------------------------------------------------------------
+// DROPDOWN / SELECT MENU  (HTML: <select id="lang"> ... </select>)
+// ------------------------------------------------------------
+
+// get selected dropdown value
+// let choice = document.querySelector("#lang").value;
+
+// validate (only if there is a blank option)
+// if (!choice) { /* show error */ }
 
 
 
