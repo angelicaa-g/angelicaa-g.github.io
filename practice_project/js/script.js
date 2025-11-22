@@ -254,7 +254,7 @@ async function displayRandomBackground(){
 // ------------------------------------------------------------
 // NUMBER INPUT  (HTML: <input type="number" id="numBox">)
 // ------------------------------------------------------------
-
+//add return after validation 
 // get number value
 // let num = document.querySelector("#numBox").value;
 
@@ -340,6 +340,46 @@ async function displayRandomBackground(){
 // 4) API returns a SINGLE object
 //    (example: getRandomQuote.php → one quote)
 //    Just display it → no loop
+// ------------------------------------------------------
+// WHEN TO USE "return" IN VALIDATION
+// ------------------------------------------------------
+
+// 1) Use return when the function MUST stop
+//    (because using the next line would cause an error)
+//
+// Example: radio button not selected
+// let selected = document.querySelector("input[name='color']:checked");
+// if (!selected) {
+//     result.innerHTML = "Select a color";
+//     return;   // STOP because selected.value would break
+// }
+
+// 2) Use return when input is invalid AND you don't want to continue
+//
+// let num = document.querySelector("#numBox").value;
+// if (num < 1 || num > 5) {
+//     msg.innerHTML = "Must be 1-5";
+//     return;   // STOP because API call shouldn't run with bad input
+// }
+
+// 3) DO NOT use multiple returns for the same input check
+//
+// Bad:
+// if (num < 1) return;
+// if (num > 5) return;
+//
+// Good:
+// if (num < 1 || num > 5) { return; }
+
+// 4) FOR FORMS: do NOT use return to block submission
+//    If using <form>, use e.preventDefault() instead.
+//
+// if (!isValid) {
+//     e.preventDefault();
+// }
+
+// 5) Do NOT use return inside loops (unless you want to exit entire function)
+// ------------------------------------------------------s
 
 
 
